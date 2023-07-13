@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Orbitron", sans-serif
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    font-family:  sans-serif;
+    color: rgb(15, 0, 0);
+    background-image: url(./background02.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+.cabecalho{
+    display: flex;
+    justify-content: center;
+}
+
+.cabecalho .logo{
+    max-width: 350px;
+    margin-top: 20px;
+}
+
+.selecao-de-personagens{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-height: calc(100vh - 152px);
+    justify-content: center;
+   
+
+}
+
+.selecao-de-personagens .lista-de-personagens {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+   
+}
+
+.selecao-de-personagens .personagens{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1080px;
+    gap: 25px;
+}
+
+.selecao-de-personagens .personagens .titulo{
+    font-size: 30px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ff8800;
+    width: 100%;
+    text-align: center;
+}
+
+.lista-de-personagens .personagem img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    -webkit-filter: grayscale(1);
+    transition: all .5s ease-in-out;
+   
+}
+
+ul:has(li:hover) li:not(:hover){
+    opacity: .6;
+    scale: .9;
+}
+
+li{
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+
+}
+
+.lista-de-personagens .personagem.selecionado img{
+    box-shadow: 0px 0px 24px 5px #ff7b00;
+    -webkit-filter: grayscale(0.1);
+}
+
+
+.personagem-selecionado{
+    text-align: center;
+    max-height: 530px;
+}
+
+
+
+.personagem-selecionado .personagem-grande{
+    width: 430px;
+    height: 430px;
+}
+
+.personagem-selecionado .nome-personagem{
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.personagem-selecionado .descricao-personagem{
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    width: 430px;
+    padding: 5px;
+    background-color: #fffff6;
+    border-radius: 5px;
+}
+
+.personagem-selecionado .descricao-personagem p{
+    margin-right: 0;
+}
+
+@media  (max-width: 1120px){
+    .cabecalho .logo{
+        max-width: 190px;
+    }
+
+    .selecao-de-personagens{
+        flex-direction: column-reverse;
+    }
+
+    .selecao-de-personagens .personagens{
+        margin-top: 37px;
+    }
+
+    .selecao-de-personagens .personagens .titulo{
+        font-size: 15px;
+    }
+
+    .selecao-de-personagens .lista-de-personagens{
+        gap: 9px;
+    }
+
+    .personagem-selecionado .personagem img{
+        width: 80px;
+
+    }
+
+    .personagem-selecionado .personagem-grande{
+        width: 350px;
+        height: 350px;
+    }
+
+    .personagem-selecionado .descricao-personagem{
+        width: 95%;
+        font-size: 16px;
+        margin: auto;  
+    }
+
+    li {
+        border-radius: 10px;
+        width: 20%;
+    }
+}
+
+
+@media (max-width: 500px) {
+    li {
+        border-radius: 10px;
+        width: 20%;
+    }
+    
+}
+
+
+
+
